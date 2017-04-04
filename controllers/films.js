@@ -2,6 +2,8 @@
 var films = require('../client/src/models/films')();
 var Film = require('../client/src/models/film');
 var Review = require('../client/src/models/review');
+var path = require('path');
+
 
 var filmOne = new Film({
 title:"a film",
@@ -33,7 +35,7 @@ filmsRouter.put('/:id', function(req, res){
 });
 
 filmsRouter.delete('/:id', function(req, res){
-  films.splice(req.params.id);
+  films.splice(req.params.id, 1);
   res.json({data:films});
 });
 
