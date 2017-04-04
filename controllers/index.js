@@ -7,7 +7,7 @@ router.use('/films', require('./films'));
 router.use(express.static('./client/build'));
 
 router.get('/', function(req, res){ 
-  res.sendFile(path.join(__dirname + 'build/index.html'));
+  // res.sendFile(path.join('./build/home.html'));
 }); 
 
 module.exports = router;
